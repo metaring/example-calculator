@@ -1,0 +1,69 @@
+<!--
+   Copyright 2019 MetaRing s.r.l.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>MetaRing Example: Calculator</title>
+        <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+        <script type="text/javascript" src="/webjars/sockjs-client/sockjs.min.js"></script>
+        <script type="text/javascript" th:src="@{server.manager.js}"></script>
+        <script type="text/javascript" th:src="@{functionalities.js}"></script>
+        <script type="text/javascript" th:src="@{app.js}"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>MetaRing Example - Calculator</h1>
+            <div class="row form-group">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <label for="firstOperand" class="col-lg-12 col-form-label">First Operand</label>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <input id="firstOperand" type="number" class="form-control"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <label for="secondOperand" class="col-lg-12 col-form-label">Second Operand</label>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <input id="secondOperand" type="number" class="form-control"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="operators" class="row form-group">
+                <div class="col-lg-3">
+                    <select class="form-control">
+                        <option>== Choose Your Operation ==</option>
+                    </select>
+                </div>
+                <div class="col-lg-1">OR</div>
+            </div>
+            <div class="row form-group">
+                <label for="result" class="col-lg-3 col-form-label">
+                    Result:
+                </label>
+                <div class="col-lg-9">
+                    <input id="result" class="form-control" type="text" readonly/>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
