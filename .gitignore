@@ -22,6 +22,10 @@ target/
 mvnw
 mvnw.cmd
 
+### Eclipse ###
+
+.metadata
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
